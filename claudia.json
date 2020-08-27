@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "cmiSearchAPI-executor",
+    "name": "cmiSearchAPI",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "x5rigstpd2",
+    "module": "src/index"
+  }
+}

@@ -1,0 +1,144 @@
+Your search request: {
+  message: [ [length]: 0 ],
+  source: 'acol',
+  query: 'your response',
+  authorized: true,
+  width: 30,
+  queryTransformed: 'your response',
+  error: false
+}
+--------------------------------
+{
+  domain: 'https://www.christmind.info',
+  message: 'OK',
+  source: 'acol',
+  width: 30,
+  query: 'your response',
+  queryTransformed: 'your response',
+  course: [
+    {
+      book: 'course',
+      unit: 'chap05',
+      location: 'p10',
+      key: '1401007.011',
+      context: ' feelings in truth come from love <em>your response</em> to them is what is guided by fear'
+    },
+    {
+      book: 'course',
+      unit: 'chap14',
+      location: 'p13',
+      key: '1401016.014',
+      context: ' it is <em>your response</em> to love that concerns us now for'
+    },
+    {
+      book: 'course',
+      unit: 'chap27',
+      location: 'p14',
+      key: '1401029.015',
+      context: ' individual you that dictates <em>your response</em>s to situations based on surface'
+    }
+  ],
+  treatise: [
+    {
+      book: 'treatise',
+      unit: 't1chap02',
+      location: 'p2',
+      key: '1402002.003',
+      context: ' answered here the answer lies in <em>your response</em> to love to respond is to answer'
+    },
+    {
+      book: 'treatise',
+      unit: 't1chap02',
+      location: 'p14',
+      key: '1402002.015',
+      context: ' a gift has been given what is <em>your response</em> '
+    },
+    {
+      book: 'treatise',
+      unit: 't1chap09',
+      location: 'p13',
+      key: '1402009.014',
+      context: ' as your initial reaction and <em>your response</em> will likely have taken on different'
+    },
+    {
+      book: 'treatise',
+      unit: 't1chap09',
+      location: 'p14',
+      key: '1402009.015',
+      context: ' thus most vulnerable in the past <em>your response</em> would have been to protect and'
+    },
+    {
+      book: 'treatise',
+      unit: 't3chap22',
+      location: 'p7',
+      key: '1402045.008',
+      context: ' plans will only interfere with <em>your response</em> to what you are given to observe'
+    },
+    {
+      book: 'treatise',
+      unit: 't4chap08',
+      location: 'p11',
+      key: '1402053.012',
+      context: ' the createds response it was <em>your response</em> and since god is both the creator'
+    }
+  ],
+  dialog: [
+    {
+      book: 'dialog',
+      unit: 'chap12',
+      location: 'p7',
+      key: '1403012.008',
+      context: ' them to provide a source for <em>your response</em> to become a means of communication'
+    },
+    {
+      book: 'dialog',
+      unit: 'chap17',
+      location: 'p10',
+      key: '1403017.011',
+      context: ' are present now is the time for <em>your response</em> '
+    },
+    {
+      book: 'dialog',
+      unit: 'day04',
+      location: 'p0',
+      key: '1403021.001',
+      context: ' arguments were not fed by anger <em>your response</em> will almost surely have been tinged'
+    },
+    {
+      book: 'dialog',
+      unit: 'day16',
+      location: 'p10',
+      key: '1403033.011',
+      context: ' relates to everything not only <em>your response</em> to sickness or crisis situations'
+    },
+    {
+      book: 'dialog',
+      unit: 'day16',
+      location: 'p13',
+      key: '1403033.014',
+      context: ' consciousness does not however include <em>your response</em>s consciousness thus does not include'
+    },
+    {
+      book: 'dialog',
+      unit: 'day33',
+      location: 'p4',
+      key: '1403050.005',
+      context: ' up your world appeal it is in <em>your response</em> that who you are being is revealed'
+    },
+    {
+      book: 'dialog',
+      unit: 'day36',
+      location: 'p4',
+      key: '1403053.005',
+      context: ' fate were of consequence only in <em>your response</em> after the fact the story of your'
+    },
+    {
+      book: 'dialog',
+      unit: 'dialog',
+      location: 'p36',
+      key: '1403060.037',
+      context: ' in another and be confident in <em>your response</em>s because they will flow from love'
+    }
+  ],
+  count: 17
+}

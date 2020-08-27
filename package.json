@@ -1,0 +1,29 @@
+{
+  "name": "search2",
+  "version": "1.0.0",
+  "description": "Search API for CMI",
+  "main": "index.js",
+  "scripts": {
+    "destroy": "claudia destroy",
+    "create": "claudia create --name cmiSearchAPI --region us-east-1 --timeout 10 --api-module src/index --policies policies",
+    "update": "claudia --no-optional-dependencies update",
+    "transpile": "babel --presets es2015 src --out-dir bin",
+    "precreate": "eslint src/**",
+    "preupdate": "eslint src/**"
+  },
+  "author": "Rick Mercer",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "claudia": "^5.12.0",
+    "eslint": "^7.7.0"
+  },
+  "dependencies": {
+    "claudia-api-builder": "^4.1.2",
+    "command-line-args": "^5.1.1"
+  },
+  "optionalDependencies": {
+    "aws-sdk": "^2.739.0"
+  }
+}

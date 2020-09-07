@@ -85,6 +85,10 @@ function parseRequest(request, lang="en") {
   }
   else {
     parms.source = userRequest.source;
+
+    if (parms.source === "pwom") {
+      lang = "pl";
+    }
   }
 
   if (!userRequest.query) {

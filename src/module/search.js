@@ -57,14 +57,14 @@ function prepareQueryString(query, lang) {
   result = result.trim();
 
   //replace two or more whitespaces with one space
-  result = result.replace(/[\s]{2,}/," ");
+  result = result.replace(/[\s]{2,}/g," ");
 
   //remove non alpha characters
   switch (lang) {
     case "pl":
-      return result.replace(/[^a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ\s]/, "");
+      return result.replace(/[^a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ\s]/g, "");
     default:
-      return result.replace(/[^\w\s]/, "");
+      return result.replace(/[^\w\s]/g, "");
   }
 }
 

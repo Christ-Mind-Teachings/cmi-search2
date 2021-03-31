@@ -45,6 +45,59 @@ function wom(result, book, info) {
   }
 }
 
+function col(result, book, info) {
+  switch(book) {
+    case "book1":
+      if (!result.book1) {
+        result.book1 = [];
+      }
+      result.book1.push(info);
+      break;
+    case "book2":
+      if (!result.book2) {
+        result.book2 = [];
+      }
+      result.book2.push(info);
+      break;
+    case "book3":
+      if (!result.book3) {
+        result.book3 = [];
+      }
+      result.book3.push(info);
+      break;
+    case "book4":
+      if (!result.book4) {
+        result.book4 = [];
+      }
+      result.book4.push(info);
+      break;
+    case "book5":
+      if (!result.book5) {
+        result.book5 = [];
+      }
+      result.book5.push(info);
+      break;
+    case "book6":
+      if (!result.book6) {
+        result.book6 = [];
+      }
+      result.book6.push(info);
+      break;
+    case "book7":
+      if (!result.book7) {
+        result.book7 = [];
+      }
+      result.book7.push(info);
+      break;
+    default:
+      if (!result.unknown) {
+        result.unknown = [];
+      }
+      result.unknown.push(info);
+      break;
+  }
+}
+
 function raj(result, book, info) {
   switch(book) {
     case "yaa":
@@ -367,6 +420,7 @@ module.exports = {
   acol: acol,
   pwom: pwom,
   raj: raj,
-  wom: wom
+  wom: wom,
+  col: col
 };
 

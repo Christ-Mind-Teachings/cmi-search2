@@ -98,6 +98,29 @@ function col(result, book, info) {
   }
 }
 
+function ftcm(result, book, info) {
+  switch(book) {
+    case "book1":
+      if (!result.book1) {
+        result.book1 = [];
+      }
+      result.book1.push(info);
+      break;
+    case "book2":
+      if (!result.book2) {
+        result.book2 = [];
+      }
+      result.book2.push(info);
+      break;
+    default:
+      if (!result.unknown) {
+        result.unknown = [];
+      }
+      result.unknown.push(info);
+      break;
+  }
+}
+
 function raj(result, book, info) {
   switch(book) {
     case "yaa":
@@ -421,6 +444,7 @@ module.exports = {
   pwom: pwom,
   raj: raj,
   wom: wom,
-  col: col
+  col: col,
+  ftcm: ftcm
 };
 

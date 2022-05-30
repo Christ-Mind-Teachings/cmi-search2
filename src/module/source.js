@@ -373,7 +373,48 @@ function acol(result, book, info, authorized) {
   }
 }
 
+/*
+ * Source: ACIM Original Edition
+ *
+ * The original function where cmi pnum do not match with oe paragraph 
+ * numbers. There is no 'ref' key in search results.
+ */
 function acimoe(result, book, info) {
+  switch(book) {
+    case "text":
+      if (!result.text) {
+        result.text = [];
+      }
+      result.text.push(info);
+      break;
+    case "workbook":
+      if (!result.workbook) {
+        result.workbook = [];
+      }
+      result.workbook.push(info);
+      break;
+    case "manual":
+      if (!result.manual) {
+        result.manual = [];
+      }
+      result.manual.push(info);
+      break;
+    default:
+      if (!result.unknown) {
+        result.unknown = [];
+      }
+      result.unknown.push(info);
+      break;
+  }
+}
+
+/*
+ * Source: ACIM Original Edition
+ *
+ * A new function where we use the 'ref' key to 
+ * match ACIM paragraph numbers in search results.
+ */
+function oe(result, book, info) {
   switch(book) {
     case "text":
       if (!result.text) {
@@ -440,6 +481,7 @@ function acim(result, book, info) {
 module.exports = {
   acim: acim,
   acimoe: acimoe,
+  oe: oe,
   acol: acol,
   pwom: pwom,
   raj: raj,

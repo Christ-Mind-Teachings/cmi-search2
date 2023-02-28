@@ -13,14 +13,38 @@ function sortResults(result) {
 }
 
 /*
- * filter result set
+ * Check if text should not be included in result set returned to caller.
  *
- * Default filter: all matches must start at word boundary, filter all the rest
+ * Args: request - request object sent by caller
+ *          text - text containing one or more matches for search term described
+ *                 by request.queryTransformed
+ *
+ * The default filter filters data that does not begin on a search term word boundary
+ * Strict mode filters data that does not begin and end on a search term word boundary
+ *
+ * returns true  - text should be removed
+ *         false - text should not be removed
+ *
  */
-function filter(request, text, lang = "en") {
-  var pos;
-  var result = false;
+function filter(request, text) {
+  var result;
+  var re = `\\b${request.queryTransformed}`;
 
+  if (request.strict) {
+    re = `${re}\\b`;
+  }
+
+  result = new RegExp(re, 'g').test(text);
+
+  //console.log("result: %s, RegExp: %s", result, re);
+
+  return !result;
+}
+
+
+/*
+ * This is old filter code, replaced Feb 24, 2023
+ *
   //don't filter result set if 'filter' passed to request
   if (request.filter) {
     result = false;
@@ -31,7 +55,7 @@ function filter(request, text, lang = "en") {
 
     if (pos === -1) {
       //this should never happen
-      result = "Yikes!! filter(): query string not found in text";
+      result = true;
     }
     else if (pos > 0) {
       let result;
@@ -48,6 +72,7 @@ function filter(request, text, lang = "en") {
 
   return result;
 }
+*/
 
 //lowercase and remove punction from query string
 function prepareQueryString(query, lang) {
@@ -109,6 +134,13 @@ function parseRequest(request, lang="en") {
 
   if (userRequest.startKey) {
     parms.startKey = userRequest.startKey;
+  }
+
+  if (!userRequest.strict) {
+    parms.strict = false;
+  }
+  else {
+    parms.strict = userRequest.strict;
   }
 
   //width defaults to 30

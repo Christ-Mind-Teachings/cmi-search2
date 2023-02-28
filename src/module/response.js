@@ -15,7 +15,8 @@ function generateSearchResponse(parms, searchResults, result) {
     var info = {};
 
     // if not filtered process item
-    if (!search.filter(parms, val.text, parms.source === "pwom" ? "pl": "en")) {
+    // if (!search.filter(parms, val.text, parms.source === "pwom" ? "pl": "en")) {
+    if (!search.filter(parms, val.text)) {
       filteredCount++;
 
       info.book = val.book;

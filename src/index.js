@@ -30,6 +30,7 @@ api.post("/search", function (request) {
   result.source = parms.source;
   result.width = parms.width;
   result.query = parms.query;
+  result.strict = parms.strict;
   result.queryTransformed = parms.queryTransformed;
 
   //present for restricted acol queries

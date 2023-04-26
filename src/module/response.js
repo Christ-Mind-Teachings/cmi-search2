@@ -22,7 +22,7 @@ function generateSearchResponse(parms, searchResults, result) {
       info.book = val.book;
       info.unit = val.unit;
 
-      //val.pid is missing from text in p0, this is due to importing 
+      //val.pid is missing from text in p0, this is due to importing
       //using dynobase
       if (typeof val.pid === "undefined") {
         info.location = "p0";
@@ -34,6 +34,11 @@ function generateSearchResponse(parms, searchResults, result) {
       // true for source "oe" - ACIM OE
       if (typeof val.ref !== "undefined") {
         info.ref = val.ref;
+      }
+      else {
+        //this helps to generalize formatting search results. All sources use
+        //info.ref to display match location (4/24/23)
+        info.ref = val.pid;
       }
 
       info.key = val.parakey;
